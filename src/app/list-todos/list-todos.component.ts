@@ -5,6 +5,7 @@ interface Todo {
   id: number;
   title: string;
   completed: boolean;
+  targetDate: Date;
 }
 
 @Component({
@@ -16,8 +17,8 @@ interface Todo {
 
 export class ListTodosComponent {
   todos: Todo[] = [
-    { id: 1, title: 'Learn Angular', completed: false },
-    { id: 2, title: 'Build a Todo App', completed: false },
-    { id: 3, title: 'Deploy the App', completed: false }
+    { id: 1, title: 'Learn Angular', completed: false, targetDate: new Date('2023-12-01') },
+    { id: 2, title: 'Build a Todo App', completed: false, targetDate: new Date('2023-12-15') },
+    { id: 3, title: 'Deploy the App', completed: false, targetDate: new Date('2023-12-31') }
   ];
 }

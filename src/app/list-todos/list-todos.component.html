@@ -3,7 +3,7 @@
     <ul>
       <li *ngFor="let todo of todos">
         <input type="checkbox" [checked]="todo.completed" />
-        {{ todo.title }}
+        {{ todo.title }} - Target Date: {{ todo.targetDate | date:'shortDate' }}
       </li>
     </ul>
   </div>
