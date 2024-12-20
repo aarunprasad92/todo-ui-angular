@@ -1,0 +1,9 @@
+<div class="todos-container">
+    <h2>Todo List</h2>
+    <ul>
+      <li *ngFor="let todo of todos">
+        <input type="checkbox" [checked]="todo.completed" />
+        {{ todo.title }}
+      </li>
+    </ul>
+  </div>
