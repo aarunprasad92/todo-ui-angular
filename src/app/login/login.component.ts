@@ -25,7 +25,7 @@ export class LoginComponent {
       this.errorMessage = '';
       console.log('Login successful');
       // Navigate to the welcome page
-      this.router.navigate(['/welcome']);
+      this.router.navigate(['/welcome', this.userName]);
     } else {
       this.errorMessage = 'Invalid credentials';
     }

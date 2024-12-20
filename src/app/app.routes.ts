@@ -6,6 +6,6 @@ import { ErrorComponent } from './error/error.component';
 export const routes: Routes = [
   { path: '', component: LoginComponent }, // Default route
   { path: 'login', component: LoginComponent },
-  { path: 'welcome', component: WelcomeComponent },
+  { path: 'welcome/:username', component: WelcomeComponent },
   { path: '**', component: ErrorComponent }
 ];
