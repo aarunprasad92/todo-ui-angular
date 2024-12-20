@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-welcome',
-  imports: [],
+  imports: [RouterModule],
   standalone: true,
   templateUrl: './welcome.component.html',
   styleUrl: './welcome.component.css'
