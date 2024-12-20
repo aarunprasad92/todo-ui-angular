@@ -1,17 +1,20 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   imports: [FormsModule, CommonModule],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
   userName: string = '';
   password: string = '';
   errorMessage: string = '';
+
+  constructor(private router: Router) {}
 
   // Event handler method
   onLogin(): void {
@@ -21,7 +24,8 @@ export class LoginComponent {
     if (this.userName === validUsername && this.password === validPassword) {
       this.errorMessage = '';
       console.log('Login successful');
-      // Add your login logic here
+      // Navigate to the welcome page
+      this.router.navigate(['/welcome']);
     } else {
       this.errorMessage = 'Invalid credentials';
     }
